@@ -109,12 +109,26 @@ public class ResourceManagement
             System.out.println();
             System.out.println("Current Department is: " + dept.name);
 
-            System.out.println("Total Spent: " + dept.priority);
 
-            System.out.println("  Items Received:");
+            System.out.printf("Total Spent: " + "$%.2f\n", dept.priority);
+
+            double percentage = (dept.priority / this.budget) * 100;
+            String formatted = String.format("%.2f", percentage);
+
+            System.out.println("Percentage of Budget: " + formatted + "%");
+            System.out.println("----------------------------");
+
+            System.out.println("ITEMS RECEIVED");
+
             for (Item item : dept.itemsReceived) {
                 String price = String.format("$%.2f", item.price);
-                System.out.printf("  %-30s - %30s\n", item.name, price);
+                System.out.printf("%-30s - %30s\n", item.name, price);
+            }
+            System.out.println();
+            System.out.println("ITEMS NOT RECEIVED");
+            for (Item item : dept.itemsRemoved) {
+                String price = String.format("$%.2f", item.price);
+                System.out.printf("%-30s - %30s\n", item.name, price);
             }
         }
       }
