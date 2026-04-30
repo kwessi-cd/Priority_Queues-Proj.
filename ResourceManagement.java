@@ -20,7 +20,7 @@ public class ResourceManagement
         /* TODO : Fill in your name */
         System.out.println("This solution was completed by:");
         System.out.println("Brandon Ikwuagwu");
-        System.out.println("Eddy Kwes");
+        System.out.println("Eddy Kwessi");
       }
 
       /* Constructor for a ResourceManagement object
